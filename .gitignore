@@ -1,0 +1,6 @@
+# Python
+*.pyc
+__pycache__/
+
+# Editor
+.idea
