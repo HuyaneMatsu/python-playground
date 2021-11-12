@@ -98,7 +98,7 @@ class Partial:
             if generator is None:
                 generator = self.function()
                 self.generator = generator
-                generator.send(None)
+                generator.send(None)e
             
             for arg in args:
                 generator.send(arg)
