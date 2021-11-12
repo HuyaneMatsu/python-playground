@@ -2,7 +2,7 @@ Benchmark for using looped task timeouts with different technologies mainly targ
 feature.
 
 Cpython3.8
-```
+```py
 Starting dummy
 Task finished in 0.0070 seconds.
 Starting asyncio basic
