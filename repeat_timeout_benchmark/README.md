@@ -25,7 +25,7 @@ Starting hata repeat timeout
 Task finished in 0.0062 seconds.
 ```
 
-The results show, that `repeat_timeout` is indeed a super lightweight looped timeouter, as it is able to beat asyncio
-80 times consistently.
+The results show, that `repeat_timeout` is indeed a super lightweight looped timeouter, as it is consistently able to
+produce 80 times better results than asyncio.
 
 Note, that this is an extremely edge case scenario, but I like it.
