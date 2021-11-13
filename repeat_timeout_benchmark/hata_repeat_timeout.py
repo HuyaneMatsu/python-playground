@@ -7,12 +7,13 @@ async def dummy_task():
 async def main_loop():
     count = 0
     
-    for _ in repeat_timeout(0.1):
-        await dummy_task()
-        
-        count += 1
-        if count > LOOP_COUNT:
-            break
+    with repeat_timeout(0.1) as loop:
+        for _ in loop:
+            await dummy_task()
+            
+            count += 1
+            if count > LOOP_COUNT:
+                break
 
 
 async def main_task():
