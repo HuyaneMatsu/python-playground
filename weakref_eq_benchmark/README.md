@@ -9,10 +9,10 @@ Task finished in 0.2641 seconds.
 ```
 
 pypy3.6
-```py
+```
 $ pypy3 generic.py 
 Task finished in 0.0876 seconds.
-$ pypy3 forwarded_eq.py 
+$ pypy3 forwarded_eq.py
 Task finished in 0.0036 seconds.
 ```
 
