@@ -13,10 +13,7 @@ class ForwardedEqWeakReferer(WeakReferer):
         if (object_ is not None):
             return other == object_
         
-        if isinstance(other, ForwardedEqWeakReferer):
-            return WeakReferer.__eq__(self, other)
-        
-        return False
+        return WeakReferer.__eq__(self, other)
 
 
 OBJECT_1 = WeakReferableType()
