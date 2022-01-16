@@ -10,7 +10,7 @@ def partial_wrapper(parameter_count, function):
     Parameters
     ----------
     parameter_count : `int`
-        The expected parameter count passed to teh function before calling it.
+        The expected parameter count passed to the function before calling it.
         
         This parameter is passed by a partial function wrapper, and should be passed when used.
     
@@ -39,7 +39,7 @@ class Partial:
     generator : `GeneratorFunctionType`
         The generator returned by the function..
     parameter_count : `int`
-        The expected parameter count passed to teh function before calling it.
+        The expected parameter count passed to the function before calling it.
     """
     __slots__ = ('function', 'generator', 'parameter_count', )
     
@@ -50,7 +50,7 @@ class Partial:
         Parameters
         ----------
         parameter_count : `int`
-            The expected parameter count passed to teh function before calling it.
+            The expected parameter count passed to the function before calling it.
         function : `GeneratorFunctionType`, Optional (Keyword only)
             The function to wrap.
         
