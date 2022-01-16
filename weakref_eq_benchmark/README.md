@@ -2,18 +2,18 @@ Benchmark for overwriting weakreferer's `__eq__` for fast comparisons.
 
 Cpython3.8
 ```
+$ python3 forwarded_eq.py 
+Task finished in 0.4162 seconds.
 $ python3 generic.py 
-Task finished in 0.1528 seconds.
-$ forwarded_eq.py 
-Task finished in 0.2641 seconds.
+Task finished in 0.3140 seconds.
 ```
 
 pypy3.6
 ```
 $ pypy3 generic.py 
-Task finished in 0.0876 seconds.
-$ pypy3 forwarded_eq.py
-Task finished in 0.0036 seconds.
+Task finished in 0.1362 seconds.
+$ pypy3 forwarded_eq.py 
+Task finished in 0.0059 seconds.
 ```
 
 The results show, that in cpython the time spent executing bytecode slows our process dramatically down. But in pypy
