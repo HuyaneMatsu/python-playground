@@ -1,5 +1,5 @@
 import sys
-from time import perf_counter
+from time import process_time
 from contextlib import contextmanager
 
 @contextmanager
@@ -9,9 +9,9 @@ def timer():
     
     This function can be used within a context block.
     """
-    start = perf_counter()
+    start = process_time()
     try:
         yield
     finally:
-        end = perf_counter()
+        end = process_time()
         sys.stdout.write('Task finished in {:.04f} seconds.\n'.format(end-start))
