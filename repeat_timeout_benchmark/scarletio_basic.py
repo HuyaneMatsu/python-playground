@@ -1,4 +1,4 @@
-from hata import KOKORO, Task, future_or_timeout
+from scarletio import Task, future_or_timeout, create_event_loop
 from timer import timer, LOOP_COUNT
 
 async def dummy_task():
@@ -8,7 +8,7 @@ async def main_loop():
     count = 0
     
     while True:
-        task = Task(dummy_task(), KOKORO)
+        task = Task(dummy_task(), loop)
         future_or_timeout(task, 0.1)
         await task
         
@@ -23,5 +23,6 @@ async def main_task():
     with timer():
         await main_loop()
 
-KOKORO.run(main_task())
-KOKORO.stop()
+loop = create_event_loop()
+loop.run(main_task())
+loop.stop()

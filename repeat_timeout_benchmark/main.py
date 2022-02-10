@@ -6,8 +6,8 @@ subprocess.call([sys.executable, 'dummy.py'])
 sys.stdout.write('Starting asyncio basic\n')
 subprocess.call([sys.executable, 'asyncio_basic.py'])
 
-sys.stdout.write('Starting hata basic\n')
-subprocess.call([sys.executable, 'hata_basic.py'])
+sys.stdout.write('Starting scarletio basic\n')
+subprocess.call([sys.executable, 'scarletio_basic.py'])
 
-sys.stdout.write('Starting hata repeat timeout\n')
-subprocess.call([sys.executable, 'hata_repeat_timeout.py'])
+sys.stdout.write('Starting scarletio repeat timeout\n')
+subprocess.call([sys.executable, 'scarletio_repeat_timeout.py'])
