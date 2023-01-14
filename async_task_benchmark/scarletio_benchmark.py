@@ -28,8 +28,7 @@ class Batch:
         if is_coroutine(future_results):
             future_results = await future_results
 
-        for key_future_pair, result in zip(futures, future_results):
-            key, future = key_future_pair
+        for (key, future), result in zip(futures, future_results):
             future.set_result(result)
 
     @staticmethod
@@ -135,7 +134,7 @@ async def main_task():
     with timer():
         await main_loop()
 
+
 loop = create_event_loop()
-# Blocking call which returns when the hello_world() coroutine is done
 loop.run(main_task())
 loop.stop()
